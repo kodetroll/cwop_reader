@@ -1,0 +1,21 @@
+First, find a wx station near to the location you wish to monitor:
+Go to https://madis-data.noaa.gov/sfc_display/ and zoom in until you locate 
+a station. The station id is the important thing to note. Look for ones that
+are of the form DXXXX and not KXXX (the latter are airport wx stations and
+are not in the wxqa db).
+
+Next check to see if your selected station is in the wxqa db:
+Goto 'http://wxqa.com/search.htm' and enter the station id as noted from the
+step above and click 'Search'. You should end up on a page with several lines
+of garbled looking text, like this:
+
+DW6507>APRS,TCPXX*,qAX,CWOP-3:@281755z3029.90N/08629.21W_047/003g006t056r000p000P000h52b10249L761.DsIP-VP
+4/72 data packets and 0/0 duplicates; 420/7560 bytes
+
+Each line should start with your station's call, which is based on the ID we
+used to search on. If you see this, then your station is being tracked, or 
+has data anyway. 
+
+Edit the config file 'local.cfg' (following the instruction therein) to 
+update the station ID (IDNUM) value with your selected station's ID.
+
