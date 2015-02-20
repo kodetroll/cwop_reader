@@ -10,14 +10,17 @@
 # Date: January 2015
 #
 
-# load the config file
-. ./local.cfg
+# Include the cwop reader functions file (depends on being in the path)
+. cwop-reader-functions.sh
+
+# fetch the message from the server, save locally and grep the APRS WX packet
+GetWxMessage $URL $TMPFILE $TMPDAT
 
 # get the message from the server
 . ./getWxMessage.sh
 
 # parse the packet for the report time value (-z -or- --time)
-OUT=`cat ${DATFILE} | ./aprs_wx_parse --quiet --time`
+OUT=`cat ${TMPDAT} | ${PARSER} --quiet --time`
 
 # print this to STDOUT
 echo $OUT

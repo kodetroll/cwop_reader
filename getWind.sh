@@ -10,14 +10,14 @@
 # Date: January 2015
 #
 
-# load the config file
-. ./local.cfg
+# Include the cwop reader functions file (depends on being in the path)
+. cwop-reader-functions.sh
 
 # fetch the message from the server, save locally and grep the APRS WX packet
-. ./getWxMessage.sh
+GetWxMessage $URL $TMPFILE $TMPDAT
 
 # parse the APRS WX packet for the wind speed value (-s -or- --speed)
-OUT=`cat ${DATFILE} | ./aprs_wx_parse --quiet --speed`
+OUT=`cat ${TMPDAT} | ${PARSER} --quiet --speed`
 
 # print this to STDOUT
 echo $OUT

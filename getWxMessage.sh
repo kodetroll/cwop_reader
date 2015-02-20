@@ -9,12 +9,14 @@
 # Author: Kodetroll (KB4OID)
 # Date: January 2015
 #
+# Include the cwop reader functions file
+#. ./cwop-reader-functions.sh
 
 # load the config file
-. ./local.cfg
+#LoadConfig
 
 # Fetch the page, silently, and save it to file
-curl ${URL} -s -o ${FILE}
+curl ${URL} -s -o ${TMPFILE}
 
 # grep the page, find the first line of packets and save this to DATFILE
-cat ${FILE} | grep "$IDW>" | head -n1 > ${DATFILE}
+cat ${TMPFILE} | grep "$IDW>" | head -n1 > ${TMPDAT}

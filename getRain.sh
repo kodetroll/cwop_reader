@@ -10,14 +10,14 @@
 # Date: January 2015
 #
 
-# load the config file
-. ./local.cfg
+# Include the cwop reader functions file (depends on being in the path)
+. cwop-reader-functions.sh
 
 # fetch the message from the server, save locally and grep the APRS WX packet
-. ./getWxMessage.sh
+GetWxMessage $URL $TMPFILE $TMPDAT
 
 # parse the APRS WX packet for the rain fall value (-r -or- --rain)
-OUT=`cat ${DATFILE} | ./aprs_wx_parse --quiet --rain`
+OUT=`cat ${TMPDAT} | ${PARSER} --quiet --rain`
 
 # print this to STDOUT
 echo $OUT
