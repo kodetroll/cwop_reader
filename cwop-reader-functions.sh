@@ -1,5 +1,5 @@
 #!/bin/bash
-# cwop-reader-functions.sh - A Bash script function linrary to support
+# cwop-reader-functions.sh - A Bash script function linbary to support
 # the cwop_reader application suite.
 #
 # (C) 2015 KB4OID Labs, A division of Kodetroll Heavy Industries
@@ -7,29 +7,29 @@
 # Author: Kodetroll (KB4OID)
 # Date: February 2015
 #
+
+# This will search for and load the config file
 function LoadConfig () {
+
+  CONF="cwop-reader.conf"
 
   LOCAL="./"
   ETC="/etc/cwop-reader/"
   USR="/usr/local/etc/cwop-reader/"
   SHARE="/usr/share/cwop-reader/"
-  CONF="cwop-reader.conf"
+
   TEST=""
   CFG=""
+
   for DIR in "$ETC" "$USR" "$SHARE" "$LOCAL"
   do
     TEST="$DIR/$CONF"
-#    echo "Looking for $CONF in $DIR"
     # test for the existance of the config file
     if [ -e "$TEST" ]; then
-#        echo "Config found!"
         CFG=$TEST
-#    else
-#        echo "Config NOT found!"
     fi
   done
 
-#  echo "CFG: $CFG"
   # load the config file
   if [ ! -z $CFG ];  then
       . $CFG
@@ -39,6 +39,7 @@ function LoadConfig () {
   fi
 }
 
+# This will ensure that the tmpdir is always ready and waiting!
 function ChkTmp () {
 
   if [ ! -e "$TMPDIR" ]; then
@@ -47,14 +48,11 @@ function ChkTmp () {
   fi
 }
 
+# This will call the wxqa site, fetch the specified file for the specified
+# station ID and save it to a temp file location. It will then grep this
+# for the aprs wxformat info and save this to a second temp file. This
+# last file is loaded and parsed for the parameter by the calling script.
 function GetWxMessage () {
-  #URL=$1
-  #TMPFILE=$2
-  #TMPDAT=$3
-
-  #echo "URL: $URL"
-  #echo "TMPDAT: $TMPDAT"
-  #echo "TMPFILE: $TMPFILE"
 
   # Fetch the page, silently, and save it to file
   curl ${1} -s -o ${2}

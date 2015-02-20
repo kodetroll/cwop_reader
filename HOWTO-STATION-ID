@@ -16,6 +16,6 @@ Each line should start with your station's call, which is based on the ID we
 used to search on. If you see this, then your station is being tracked, or 
 has data anyway. 
 
-Edit the config file 'local.cfg' (following the instruction therein) to 
-update the station ID (IDNUM) value with your selected station's ID.
+Edit the config file 'cwop-reader.conf' (following the instructions therein) 
+to update the station ID (IDNUM) value with your selected station's ID.
 

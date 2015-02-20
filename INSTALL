@@ -1,0 +1,14 @@
+To build and install the cwop-reader tool suite:
+
+Git clone the project onto your machine. Change to the cwop_reader folder. 
+Type 'make' to compile the aprs packet parser app. OPtionally, type
+'sudo make install' to install to permanent locations. 
+
+ git clone https://github.com/kodetroll/cwop_reader.git
+ cd cwop_reader
+ make
+ sudo make install
+
+
+See the howto on choosing a station ID (HOWTO-STATION-ID) for instructions on
+how to configure the tool suite.

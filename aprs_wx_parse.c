@@ -1,7 +1,7 @@
 /*****************************************************************************
  * aprs_wx_parse.c - Ssimple program to parse a WX related APRS message and
- * deliver the desired parameter. Of use in building embedded wx widgets. 
- * The APRS WX formatted message to be parsed is sent to STDIN (most useful 
+ * deliver the desired parameter. Of use in building embedded wx widgets.
+ * The APRS WX formatted message to be parsed is sent to STDIN (most useful
  * used with a pipe). Which parameter to be parsed (can be a list) and printed
  * to STDOUT is provided as a command line arg input.
  *
@@ -71,7 +71,7 @@ void copyright(void)
 }
 
 void header(char * name)
-{		
+{
 	version(name);
 	copyright();
 }
@@ -97,7 +97,7 @@ void usage(char * name)
  	printf(" 		--precip or -e	Show Precipitation\n");
  	printf("\n");
  	printf(" 	See: http://www.aprs.net/vm/DOS/WX.HTM for more information\n");
-}	
+}
 
 // DW6196>APRS,TCPXX*,qAX,CWOP-7:@272051z3030.38N/08630.08W_315/003g007t067r000p00
 int main(int argc, char * argv[])
@@ -129,11 +129,11 @@ int main(int argc, char * argv[])
 			{"precip",  no_argument,       0, 'e'},
 			{"version", no_argument,       0, 'v'},
 			{"help",    no_argument,       0, 'h'},
-			
+
 			{"file",    required_argument, 0, 'f'},
 			{0, 0, 0, 0}
 		};
-		
+
 		/* getopt_long stores the option index here. */
 		int option_index = 0;
 
@@ -235,9 +235,8 @@ int main(int argc, char * argv[])
 		while (optind < argc)
 			printf ("%s ", argv[optind++]);
 		putchar ('\n');
-	}	
-	
-	
+	}
+
 	ptr = strtok(inbuf,">");
 	if (debug_flag)
 		printf("ptr('>'): '%s'\n",ptr);
