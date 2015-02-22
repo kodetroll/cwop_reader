@@ -1,0 +1,51 @@
+<html> 
+<head><meta http-equiv="Pragma" content="no-cache"></head> 
+<body bgColor="#f5f5dc"> 
+<font face="Arial"> 
+Sun Feb 22 05:26:41 2015 <br>
+<table>
+<tr><td><TABLE align=center><FONT size=6>FLORIDA APRSWXNET/CWOP STATION</FONT><BR><center><FONT size=3><A href="http://www.wxqa.com/states_reg/fl.html">Active Day History</B></A></FONT></center>        <table border=0 cellpadding=3 cellspacing=5 width="100%" style="font-family: Arial, Helvetica, sans-serif;">        <tr>            <th class="staffTableHeader">Call/CW</th>            <th class="staffTableHeader">Town/City/Meta</th>            <th class="staffTableHeader">Lat/Lon/Maps</th>            <th class="staffTableHeader">Elev (m)</th>            <th class="staffTableHeader">Weather Graphs</th>            <th class="staffTableHeader">Near Stns</th>            <th class="staffTableHeader">NOAA MesoMap</th>            <th class="staffTableHeader">CWOP QC</th>            <th class="staffTableHeader">Meso West</th>            <th class="staffTableHeader">email to:</th>            <th class="staffTableHeader">Web Sites</th>        </tr><tr>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData">DW6196</td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"><A href="http://weather.gladstonefamily.net/site/D6196"<B>Valparaiso</B></A></td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"><A href="http://map.findu.com/DW6196"<B>30.50633 / -86.50133</B></A></td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData">24.4</td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"><A href="http://www.findu.com/cgi-bin/wxpage.cgi?call=DW6196!Valparaiso&last=120"<B>WxGraph</B></A></td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"><A href="http://www.findu.com/cgi-bin/wxnear.cgi?lat=30.50633&lon=-86.50133"<B>Stns</B></A></td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"><A href="http://madis.noaa.gov/sfc_display/?center_lon=-86.50133&center_lat=30.50633&scale=880"<B>DW6196</B></A></td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"><A href="http://weather.gladstonefamily.net/cgi-bin/wxqual.pl?site=D6196"<B>D6196</B></A></td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"><A href="http://mesowest.utah.edu/cgi-bin/droman/meso_base.cgi?stn=D6196"<B>D6196</B></A></td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"><A href="mailto:tom.haugh{aT ]attglobal.net"<B>Tom</B></A></td>            <td NOWRAP bgcolor="#FFFFFF" valign="top" class="tblData"> </td>        </tr></table>
+<pre>
+DW6196>APRS,TCPXX*,qAX,CWOP-1:@220446z3030.38N/08630.08W_123/000g001t058r003p003P003h94b10173L....DsIP-VP
+3/16 data packets and 0/0 duplicates; 315/1680 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-7:@212350z3030.38N/08630.08W_164/000g002t060r000p000P000h88b10180L....DsIP-VP
+3/83 data packets and 0/0 duplicates; 315/8715 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-2:@202352z3030.38N/08630.08W_202/000g003t048r000p000P000h78b10237L....DsIP-VP
+4/83 data packets and 0/0 duplicates; 420/8715 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-5:@192354z3030.38N/08630.08W_005/000g002t040r000p000P000h33b10257L....DsIP-VP
+4/83 data packets and 0/0 duplicates; 420/8715 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-1:@182357z3030.38N/08630.08W_013/000g001t046r000p000P000h34b10197L....DsIP-VP
+4/84 data packets and 0/0 duplicates; 420/8820 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-7:@172341z3030.38N/08630.08W_005/001g007t040r000p037P009h77b10137L....DsIP-VP
+3/83 data packets and 0/0 duplicates; 315/8715 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-4:@162345z3030.38N/08630.08W_153/002g009t066r000p000P000h84b10075L....DsIP-VP
+3/83 data packets and 0/0 duplicates; 315/8715 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-1:@152351z3030.38N/08630.08W_199/000g000t057r000p000P000h67b10190L....DsIP-VP
+3/83 data packets and 0/0 duplicates; 315/8715 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-3:@142353z3030.38N/08630.08W_213/000g001t056r000p000P000h74b10174L....DsIP-VP
+3/81 data packets and 0/0 duplicates; 315/8505 bytes
+   
+DW6196>APRS,TCPXX*,qAX,CWOP-1:@132351z3030.38N/08630.08W_040/000g000t047r000p000P000h41b10219L....DsIP-VP
+4/83 data packets and 0/0 duplicates; 420/8715 bytes
+   
+</pre>
+<br>
+To see a complete list of packets for the past 24 hours click here 
+<a href="http://www.findu.com/cgi-bin/raw.cgi?call=DW6196">http://www.findu.com/cgi-bin/raw.cgi?call=DW6196</a><br>
+
+<script src="http://www.google-analytics.com/urchin.js" 
+type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-160136-2";
+urchinTracker();
+</script>
+</body></html> 

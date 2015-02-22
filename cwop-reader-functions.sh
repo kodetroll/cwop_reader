@@ -39,6 +39,33 @@ function LoadConfig () {
   fi
 }
 
+# This will search for and generate the path for the parser
+function FindParser () {
+
+  FILE="aprs_wx_parse"
+
+  PATHD=""
+  LOCAL="./"
+  USR="/usr/local/etc/cwop-reader/"
+  SHARE="/usr/share/cwop-reader/"
+
+  TEST=""
+  WXP=""
+
+  for DIR in "$PATHD" "$USR" "$SHARE" "$LOCAL"
+  do
+    TEST="$DIR$FILE"
+    # test for the existance of the file
+    if [ -e "$TEST" ]; then
+        WXP=$TEST
+    fi
+  done
+
+  if [ ! -z "$WXP" ]; then
+    PARSER=$WXP
+  fi
+}
+
 # This will ensure that the tmpdir is always ready and waiting!
 function ChkTmp () {
 
@@ -64,5 +91,8 @@ function GetWxMessage () {
 
 LoadConfig
 
+FindParser
+
 ChkTmp
+
 
