@@ -1,11 +1,12 @@
-                           cwop_reader 
+cwop_reader
+========== 
 
 A simple collection of bash scripts and one c program that will fetch 
 (over the internet) WX related information provided by the NWS Civilian 
 Weather Observer Program (CWOP). 
 
 INTRODUCTION
-
+------------------
 This tool suite uses data in the form of APRS WX formatted data from the 
 wxqa.com search engine. Bash scripts and c programs found here can be used 
 to retrieve one specific parameter, i.e. temperature, from the stored data 
@@ -24,12 +25,12 @@ rain fall, or wind speed from a specified CWOP WX station, perhaps near
 your location.
 
 INSTALLING
-
+----------------
 See INSTALL for instructions on how to build and install the cwop-reader
 tool suite.
 
 CONFIGURING
-
+---------------
 At this point, you should figure out the station id of the CWOP WX station 
 you would like to use as a source for your weather data. It is unlikely that 
 the default provided will be correct for your use. Please refer to the 
