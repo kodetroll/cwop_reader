@@ -1,9 +1,17 @@
 cwop_reader
 ========== 
 
+DESCRIPTION
+-----------
 A simple collection of bash scripts and one c program that will fetch 
 (over the internet) WX related information provided by the NWS Civilian 
 Weather Observer Program (CWOP). 
+
+HOW TO GET
+----------
+To clone this repo, type:
+
+git clone https://github.com/kodetroll/cwop_reader.git
 
 INTRODUCTION
 ------------------
@@ -47,6 +55,7 @@ able to run any of the *.sh scripts, e.g. type './getTemp.sh' at the command
 line to get the current temp from your selected CWOP WX station.
 
 NOTES
+-----
 
  * See: http://wxqa.com/ for more info on the wxqa search engine.
 
