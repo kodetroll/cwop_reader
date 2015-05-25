@@ -63,6 +63,9 @@ function FindParser () {
 
   if [ ! -z "$WXP" ]; then
     PARSER=$WXP
+  else
+    echo "Parser not found, did you 'make' yet?"
+    exit 1
   fi
 }
 
