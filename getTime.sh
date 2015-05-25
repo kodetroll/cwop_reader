@@ -16,9 +16,6 @@
 # fetch the message from the server, save locally and grep the APRS WX packet
 GetWxMessage $URL $TMPFILE $TMPDAT
 
-# get the message from the server
-. ./getWxMessage.sh
-
 # parse the packet for the report time value (-z -or- --time)
 OUT=`cat ${TMPDAT} | ${PARSER} --quiet --time`
 
