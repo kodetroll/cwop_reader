@@ -14,6 +14,7 @@ function LoadConfig () {
   CONF="cwop-reader.conf"
 
   LOCAL="./"
+  BIN="./"
   ETC="/etc/cwop-reader/"
   USR="/usr/local/etc/cwop-reader/"
   SHARE="/usr/share/cwop-reader/"
@@ -21,17 +22,17 @@ function LoadConfig () {
   TEST=""
   CFG=""
 
-  for DIR in "$ETC" "$USR" "$SHARE" "$LOCAL"
+  for DIR in "$BIN" "$ETC" "$USR" "$SHARE" "$LOCAL"
   do
     TEST="$DIR/$CONF"
     # test for the existance of the config file
-    if [ -e "$TEST" ]; then
+    if [[ -e "$TEST" ]]; then
         CFG=$TEST
     fi
   done
 
   # load the config file
-  if [ ! -z $CFG ];  then
+  if [[ ! -z $CFG ]];  then
       . $CFG
   else
      echo "Config file not found exiting!"
@@ -48,20 +49,25 @@ function FindParser () {
   LOCAL="./"
   USR="/usr/local/etc/cwop-reader/"
   SHARE="/usr/share/cwop-reader/"
+  BIN="/home/slm/bin/"
+  SBIN="/usr/local/sbin/"
 
   TEST=""
   WXP=""
 
-  for DIR in "$PATHD" "$USR" "$SHARE" "$LOCAL"
+  for DIR in "$PATHD" "$BIN" "$SBIN" "$USR" "$SHARE" "$LOCAL"
   do
-    TEST="$DIR$FILE"
+    TEST="$DIR/$FILE"
+#echo "TEST: $TEST"
     # test for the existance of the file
-    if [ -e "$TEST" ]; then
-        WXP=$TEST
+    if [[ -e "$TEST" ]]; then
+        #echo "FOUND!"
+        WXP="$TEST"
     fi
+    #echo "WXP: $WXP"
   done
-
-  if [ ! -z "$WXP" ]; then
+#echo "WXP: $WXP"
+  if [[ ! -z "$WXP" ]]; then
     PARSER=$WXP
   else
     echo "Parser not found, did you 'make' yet?"
@@ -72,7 +78,7 @@ function FindParser () {
 # This will ensure that the tmpdir is always ready and waiting!
 function ChkTmp () {
 
-  if [ ! -e "$TMPDIR" ]; then
+  if [[ ! -e "$TMPDIR" ]]; then
     echo "Temp folder \"$TMPDIR\" does NOT exist, creating!"
     mkdir -p ${TMPDIR}
   fi
